@@ -90,7 +90,7 @@ const anotheNum = ret();
 console.log(anotheNum);
 
 const logger = function () {
-	console.log('Hello')
+	console.log('Hello');
 };
 logger();
 
@@ -116,6 +116,16 @@ console.log(logg.str(6, 5));
 const num4 = 12.2;
 console.log(Math.round(num4));
 
-const test ="12.2px";
+const test = "12.2px";
 console.log(parseInt(test));
 console.log(parseFloat(test));
+
+//! CALLBACK
+
+function learnJS(lang, callback) {
+	console.log(`я учу:${lang}`);
+	callback();
+}
+learnJS('JavaScript', function () {
+	console.log('я прошел этот урок');
+});
