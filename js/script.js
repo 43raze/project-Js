@@ -129,3 +129,28 @@ function learnJS(lang, callback) {
 learnJS('JavaScript', function () {
 	console.log('я прошел этот урок');
 });
+
+const arr = [2, 3, 6, 8, 12];
+arr.forEach(function (item, i, arr) {
+	console.log(`${i}: ${item} внутри массива ${arr}`);
+}); // ! Где i это номер массива, item это количество в массиве, третий аргумент это ссылка на элемент в массиве!!!!
+
+for (let value of arr) {
+	console.log(value);
+}
+
+const str2 = prompt('', '');
+const products = str2.split(',');
+products.sort();
+console.log(products.join(';'));
+
+
+function copy(mainOdj) {
+	let objCopy = {};
+
+	let key;
+	for (key in mainOdj) {
+		objCopy[key] = mainOdj[key];
+	}
+	return objCopy;
+}
