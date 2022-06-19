@@ -64,123 +64,123 @@
 
 //! Фуyкции
 
-let num = 20;
+// let num = 20;
 
-function shiwFirstMEssage(text) {
-	console.log(text);
-	//let num = 100;
-	console.log(num);
-}
-shiwFirstMEssage('Hello world!');
-console.log(num);
+// function shiwFirstMEssage(text) {
+// 	console.log(text);
+// 	//let num = 100;
+// 	console.log(num);
+// }
+// shiwFirstMEssage('Hello world!');
+// console.log(num);
 
-function calc(a, b) {
-	return (a + b);
-}
-console.log(calc(7, 3));
-console.log(calc(70, 3));
-console.log(calc(10, 3));
+// function calc(a, b) {
+// 	return (a + b);
+// }
+// console.log(calc(7, 3));
+// console.log(calc(70, 3));
+// console.log(calc(10, 3));
 
-function ret() {
-	let num = 50;
-	return num;
-}
+// function ret() {
+// 	let num = 50;
+// 	return num;
+// }
 
-const anotheNum = ret();
-console.log(anotheNum);
+// const anotheNum = ret();
+// console.log(anotheNum);
 
-const logger = function () {
-	console.log('Hello');
-};
-logger();
+// const logger = function () {
+// 	console.log('Hello');
+// };
+// logger();
 
-const cal2 = (a, b) => a + b;
+// const cal2 = (a, b) => a + b;
 
-//! Методы и свойства строк и чисел
+// //! Методы и свойства строк и чисел
 
-const str = 'tEst';
-// const arr = [1, 2, 3];
-console.log(str.toUpperCase()); //! ВЕРХНИЙ
-console.log(str.toLocaleLowerCase()); //!нижний регистр
+// const str = 'tEst';
+// // const arr = [1, 2, 3];
+// console.log(str.toUpperCase()); //! ВЕРХНИЙ
+// console.log(str.toLocaleLowerCase()); //!нижний регистр
 // console.log(arr.length)
 
-const fruit = 'Some fruit';
-console.log(fruit.indexOf('q'));
+// const fruit = 'Some fruit';
+// console.log(fruit.indexOf('q'));
 
-const logg = 'Hello World!';
-console.log(logg.slice(6));
+// const logg = 'Hello World!';
+// console.log(logg.slice(6));
 
-console.log(logg.substring(6, 11));
-console.log(logg.str(6, 5));
+// console.log(logg.substring(6, 11));
+// console.log(logg.str(6, 5));
 
-const num4 = 12.2;
-console.log(Math.round(num4));
+// const num4 = 12.2;
+// console.log(Math.round(num4));
 
-const test = "12.2px";
-console.log(parseInt(test));
-console.log(parseFloat(test));
+// const test = "12.2px";
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
 
 //! CALLBACK
 
-function learnJS(lang, callback) {
-	console.log(`я учу:${lang}`);
-	callback();
-}
-learnJS('JavaScript', function () {
-	console.log('я прошел этот урок');
-});
+// function learnJS(lang, callback) {
+// 	console.log(`я учу:${lang}`);
+// 	callback();
+// }
+// learnJS('JavaScript', function () {
+// 	console.log('я прошел этот урок');
+// });
 
-const arr = [2, 3, 6, 8, 12];
-arr.forEach(function (item, i, arr) {
-	console.log(`${i}: ${item} внутри массива ${arr}`);
-}); // ! Где i это номер массива, item это количество в массиве, третий аргумент это ссылка на элемент в массиве!!!!
+// const arr = [2, 3, 6, 8, 12];
+// arr.forEach(function (item, i, arr) {
+// 	console.log(`${i}: ${item} внутри массива ${arr}`);
+//}); // ! Где i это номер массива, item это количество в массиве, третий аргумент это ссылка на элемент в массиве!!!!
 
-for (let value of arr) {
-	console.log(value);
-}
+// for (let value of arr) {
+// 	console.log(value);
+// }
 
-const str2 = prompt('', '');
-const products = str2.split(',');
-products.sort();
-console.log(products.join(';'));
+// const str2 = prompt('', '');
+// const products = str2.split(',');
+// products.sort();
+// console.log(products.join(';'));
 
-function copy(mainOdj) {
-	let objCopy = {};
+// function copy(mainOdj) {
+// 	let objCopy = {};
 
-	let key;
-	for (key in mainOdj) {
-		objCopy[key] = mainOdj[key];
-	}
-	return objCopy;
-}
+// 	let key;
+// 	for (key in mainOdj) {
+// 		objCopy[key] = mainOdj[key];
+// 	}
+// 	return objCopy;
+// }
 
 //! Оператор разворота!!!
-const video = ['youtube', 'vimio', 'rytube'];
-const blogs = ['worpress', 'livejournal', 'bloger'];
-const internet = [...video, ...blogs, 'vk', 'faceboock'];
-console.log(internet);
+// const video = ['youtube', 'vimio', 'rytube'];
+// const blogs = ['worpress', 'livejournal', 'bloger'];
+// const internet = [...video, ...blogs, 'vk', 'faceboock'];
+// console.log(internet);
 
-const array = ['1', 'b'];
-const newAAray = [...array];
+// const array = ['1', 'b'];
+// const newAAray = [...array];
 
-const q = {
-	one: 1,
-	two: 2
-};
+// const q = {
+// 	one: 1,
+// 	two: 2
+// };
 
-const newObj = {
-	...q
-};
+// const newObj = {
+// 	...q
+// };
 
 //! ООП основы
 
-let str3 = 'some';
-let strObj = new String(str3);
+// let str3 = 'some';
+// let strObj = new String(str3);
 
-console.log(typeof (str3));
-console.log(typeof (strObj));
+// console.log(typeof (str3));
+// console.log(typeof (strObj));
 
-console.dir([1, 2, 3]);
+// console.dir([1, 2, 3]);
 
 
 // const box = document.getElementById('box');
@@ -202,37 +202,37 @@ console.dir([1, 2, 3]);
 // const oneHeart = document.querySelector('.heart');
 // console.log(oneHeart);
 //! practice
-const
-	box = document.getElementById('box'),
-	buttos = document.getElementsByTagName('button'),
-	circles = document.getElementsByClassName('circle'),
-	hearts = document.querySelectorAll('.heart'),
-	oneHeart = document.querySelector('.heart'),
-	wrapper = document.querySelector('.wrapper');
+// const
+// 	box = document.getElementById('box'),
+// 	buttos = document.getElementsByTagName('button'),
+// 	circles = document.getElementsByClassName('circle'),
+// 	hearts = document.querySelectorAll('.heart'),
+// 	oneHeart = document.querySelector('.heart'),
+// 	wrapper = document.querySelector('.wrapper');
 
-box.style.backgroundColor = 'blue';
-box.style.width = '500px';
+// box.style.backgroundColor = 'blue';
+// box.style.width = '500px';
 
-box.style.cssText = 'background-color: blue; width: 100px;';
+// box.style.cssText = 'background-color: blue; width: 100px;';
 
-buttos[1].style.borderRadius = '100%';
-circles[0].style.backgroundColor = 'red';
+// buttos[1].style.borderRadius = '100%';
+// circles[0].style.backgroundColor = 'red';
 
 // for (let i = 0; i < hearts.length; i++) {
 // hearts[i].style.backgroundColor = 'blue';
 // }
 
-hearts.forEach(item => {
-	item.style.backgroundColor = 'blue';
-});
+// hearts.forEach(item => {
+// 	item.style.backgroundColor = 'blue';
+// });
 
-const div = document.createElement('div');
+// const div = document.createElement('div');
 
 // const text = document.createTextNode('Тут был я');
 
-div.classList.add('black');
+// div.classList.add('black');
 
-wrapper.append(div); //! append добавить элемент  в конец
+// wrapper.append(div); //! append добавить элемент  в конец
 //wrapper.prepend(div);  //! append добавить элемент  в начало
 
 //hearts[1].before(div);
@@ -246,22 +246,79 @@ wrapper.append(div); //! append добавить элемент  в конец
 
 // div.innerHTML = '<h1>Hello World</h1>';
 
-div.insertAdjacentHTML('', '<h2>hello</h2>');
+//div.insertAdjacentHTML('', '<h2>hello</h2>');
 // div.textContent= 'hello';
+
+// const btn = document.querySelector('button');
+
+// btn.addEventListener('click', (e) => {
+// 	e.target.remove();
+// });
+
+// let i = 0;
+// const deleteElement = (e) => {
+// 	console.log(e.target);
+// 	i++;
+// 	if (i == 1) {
+// 		btn.removeEventListener('click', deleteElement);
+// 	}
+// };
+
+// btn.addEventListener('click', deleteElement);
 
 const btn = document.querySelector('button');
 
-btn.addEventListener('click', (e) => {
-	e.target.remove();
+btn.addEventListener('click', function () {
+	this.style.backgroundColor = 'red';
 });
 
-let i = 0;
-const deleteElement = (e) => {
-	console.log(e.target);
-	i++;
-	if (i == 1) {
-		btn.removeEventListener('click', deleteElement);
+// btn.addEventListener('click',  (e)=> {
+// 	e.target.style.backgroundColor = 'red';
+// });
+
+const obj = {
+	num: 5,
+	sayNumber: function () {
+		const say = () => {
+			console.log(this);
+		};
+		say();
 	}
 };
+obj.sayNumber();
 
-btn.addEventListener('click', deleteElement);
+const double = a => a * 2;
+
+
+class Rectangle {
+	constructor(height, width) {
+		this.height = height;
+		this.width = width;
+	}
+
+	calcArea() {
+		return this.height * this.width;
+	}
+}
+
+class ColoredRectangleWithText extends Rectangle {
+	constructor(height, width, text, bgColor) {
+		super(height, width);
+		this.text = text;
+		this.bgColor = bgColor;
+	}
+	showMyProps() {
+		console.log(`Текст: ${this.text}, цвет: ${this.bgColor}`);
+	}
+}
+
+const div = new ColoredRectangleWithText(25, 10, 'Hello world', 'red');
+
+div.showMyProps();
+console.log(div.calcArea());
+
+// const square = new Rectangle(10, 10);
+// const long = new Rectangle(20, 100);
+
+// console.log(square.calcArea());
+// console.log(long.calcArea());
