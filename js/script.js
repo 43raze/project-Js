@@ -322,3 +322,15 @@ console.log(div.calcArea());
 
 // console.log(square.calcArea());
 // console.log(long.calcArea());
+
+
+const log = function (a, b, ...rest) {
+	console.log(a, b, rest);
+}
+log('basic', 'rest', 'operator', 'usage');
+
+function calcODouble(number, basis = 2) {
+	basis = basis || 2; // старый варинт
+	console.log(number * basis);
+}
+calcODouble(3);
