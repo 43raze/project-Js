@@ -329,39 +329,90 @@
 // };
 // log('basic', 'rest', 'operator', 'usage');
 
-// function calcODouble(number, basis = 2) {
+// function calcDouble(number, basis = 2) {
 // 	basis = basis || 2; // старый варинт
 // 	console.log(number * basis);
 // }
-// calcODouble(3);
+// calcDouble(3);
 
 
 //AJAX и общение с сервером
 
-const inputRub = document.querySelector('#rub'),
-	inputUsd = document.querySelector('#usd');
+// const inputRub = document.querySelector('#rub'),
+// 	inputUsd = document.querySelector('#usd');
 
-inputRub.addEventListener('input', () => {
-	const request = new XMLHttpRequest();
+// inputRub.addEventListener('input', () => {
+// 	const request = new XMLHttpRequest();
 
-	request.open('GET', 'js/current.json');
-	request.setRequestHeader('Content-type', 'application/json', 'charset=utf-8');
-	request.send();
+// 	request.open('GET', 'js/current.json');
+// 	request.setRequestHeader('Content-type', 'application/json', 'charset=utf-8');
+// 	request.send();
 
-	request.addEventListener('load', () => {
-		if (request.status === 200) {
-			console.log(request.response);
-			const data = JSON.parse(request.response);
-			inputUsd.value = (+inputRub.value / data.current.usd).toFixed(2);
-		} else {
-			inputUsd.value = "Что-то пошло не так";
-		}
+// 	request.addEventListener('load', () => {
+// 		if (request.status === 200) {
+// 			console.log(request.response);
+// 			const data = JSON.parse(request.response);
+// 			inputUsd.value = (+inputRub.value / data.current.usd).toFixed(2);
+// 		} else {
+// 			inputUsd.value = "Что-то пошло не так";
+// 		}
+// 	});
+
+// 	// status
+// 	// statusText
+// 	// response
+// 	// readyState
+
+// });
+
+//! Promise
+
+console.log('Запрос данных...');
+
+const req = new Promise(function (resolve, reject) {
+	setTimeout(() => {
+		console.log('Подготовка данных...');
+
+		const product = {
+			name: 'tv',
+			price: 2000
+		};
+		resolve(product);
+	}, 2000);
+});
+
+req.then((product) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			product.status = 'order';
+			resolve(product);
+		}, 2000);
 	});
+}).then(data => {
+	data.modify = true;
+	return data;
 
-	// status
-	// statusText
-	// response
-	// readyState
+}).then(data => {
+	console.log(data);
+}).catch(() => {
+	console.error('Произошла ошибка');
+}).finally(() => {
+	console.log('Finally');
+});
 
+const test = time => {
+	return new Promise(resolve => {
+		setTimeout(() => resolve(), time);
+	});
+};
 
+// test(1000).then(() => console.log('1000 ms'));
+// test(2000).then(() => console.log('2000 ms'));
+
+Promise.all([test(1000), test(2000)]).then(() => {
+	console.log('All');
+});
+
+Promise.race([test(1000), test(2000)]).then(() => {
+	console.log('All');
 });
